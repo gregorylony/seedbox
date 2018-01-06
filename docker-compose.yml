@@ -1,0 +1,13 @@
+version: '3'
+services:
+  flood:
+    build:
+      context: "./flood"
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+    tty: true
+networks:
+  backend:
+    driver: "bridge"
