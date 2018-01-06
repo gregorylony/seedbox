@@ -1,4 +1,4 @@
-FROM node:7.8.0
+FROM node:latest
 
 RUN apt-get update && apt-get install -y mediainfo git && rm -rf /var/lib/apt/lists/*
 
