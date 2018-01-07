@@ -9,7 +9,7 @@ COPY config.docker.js /usr/src/app/config.js
 
 RUN npm install && npm cache clean --force
 
-RUN npm build
+RUN npm run build
 
 EXPOSE 3000
 VOLUME ["/data"]
