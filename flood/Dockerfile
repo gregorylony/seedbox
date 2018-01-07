@@ -7,11 +7,11 @@ WORKDIR /usr/src/app
 RUN git clone https://github.com/jfurrow/flood.git .
 COPY config.docker.js /usr/src/app/config.js
 
-# RUN npm install && npm cache clean --force
+RUN npm install && npm cache clean --force
 
-# RUN npm build
+RUN npm build
 
 EXPOSE 3000
 VOLUME ["/data"]
 
-# CMD ["npm", "start"]
+CMD ["npm", "start"]
